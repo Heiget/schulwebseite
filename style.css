@@ -1,0 +1,130 @@
+:root{
+  --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7dd3fc;
+  --glass: rgba(255,255,255,0.04);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#071029 0%, #0f1724 100%);color:#e6eef6}
+header{padding:20px 24px;display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#07203a;font-weight:700}
+h1{font-size:18px;margin:0}
+.subtitle{font-size:12px;color:var(--muted)}
+nav{display:flex;gap:8px;align-items:center}
+.btn{background:var(--glass);padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);cursor:pointer;color:var(--accent)}
+.container{max-width:1100px;margin:18px auto;padding:0 16px}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.article-count{margin-left:auto;color:var(--muted);font-size:13px}
+input[type=search]{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;min-width:220px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 4px 18px rgba(2,6,23,0.6)}
+.card h3{margin:0 0 6px 0;font-size:16px}
+.meta{font-size:12px;color:var(--muted);margin-bottom:10px}
+.excerpt{font-size:14px;color:#dcebf9;line-height:1.35}
+footer{color:var(--muted);text-align:center;padding:18px 0}
+.tag{display:inline-block;background:rgba(125,211,252,0.08);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--accent);margin-right:6px}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal .panel{width:100%;max-width:900px;background:#071428;padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 10px 40px rgba(2,6,23,0.7)}
+.modal .panel h2{margin-top:0}
+.modal-meta{color:var(--muted);font-size:13px;margin-bottom:12px}
+.modal-body{line-height:1.5;color:#dfeeff;max-height:60vh;overflow-y:auto}
+.panel-header{display:flex;justify-content:space-between;align-items:center}
+.controls{display:flex;gap:8px}
+@media (max-width:520px){header{flex-direction:column;align-items:flex-start} .brand h1{font-size:16px}}
+
+
+
+/* Dark Mode (default) */
+:root {
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#7dd3fc;
+  --glass: rgba(255,255,255,0.04);
+  --text:#e6eef6;
+  --text-alt:#dcebf9;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Light Mode */
+body.light {
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --muted:#4b5563;
+  --accent:#2563eb;
+  --glass: rgba(0,0,0,0.06);
+  --text:#1f2937;
+  --text-alt:#374151;
+  background:linear-gradient(180deg,#e5ecf5 0%, #f7f9fb 100%);
+  color:var(--text);
+}
+
+/* WICHTIG: überall Variablen einsetzen */
+body {
+  margin:0;
+  background:linear-gradient(180deg,#071029 0%, #0f1724 100%);
+  color:var(--text);
+}
+
+.card {
+  background: var(--card);
+  border:1px solid var(--glass);
+  color:var(--text);
+}
+
+.btn {
+  background:var(--glass);
+  color:var(--accent);
+  border:1px solid var(--glass);
+}
+
+.excerpt {
+  color:var(--text-alt);
+}
+
+footer {
+  color:var(--muted);
+}
+
+.modal .panel {
+  background:var(--card);
+  color:var(--text);
+  border:1px solid var(--glass);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 800px;       /* Maximale Breite des Videos */
+  margin: 0 auto;         /* Zentriert das Video */
+  aspect-ratio: 16/9;     /* Erhält das Seitenverhältnis - optional, oder mit padding-bottom 56.25% */
+  background: #000;       /* Optional für bessere Optik */
+}
+
+.responsive-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* Passt Video in den Container ohne es zu beschneiden */
+  display: block;
+}
+
+.modal-video {
+  display: block;
+  width: 100%;
+  max-width: 360px; /* maximale Breite anpassen (z.B. 320, 480, 640) */
+  height: auto;
+  margin: 12px auto;
+  background: #000;
+  border-radius: 6px;
+}
+
+/* Optional: wenn du auch iframes kleiner willst */
+iframe {
+  max-width: 100%;
+  width: 100%;
+  height: 400px; /* bei Bedarf anpassen */
+}
